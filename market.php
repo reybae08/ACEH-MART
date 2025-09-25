@@ -9,12 +9,8 @@ $beli = [];
 $jumlah = [];
 $total = [];
 $grandtotal = 0;
-
 $jumlah_item = rand(2, 5);
-
 $pilih_index = array_rand($nama_barang, $jumlah_item);
-
-
 if (!is_array($pilih_index)) {
     $pilih_index = [$pilih_index];
 }
@@ -38,6 +34,8 @@ foreach ($beli as $i => $barang) {
           </tr>";
     $grandtotal += $sub_total;
 }
-
+echo "<tr><td colspan='3'><b>Total Belanja</b></td>
+      <td><b>Rp " . number_format($grandtotal, 0, ',', '.') . "</b></td></tr>";
+echo "</table>";
 
 ?>
